@@ -94,6 +94,42 @@ namespace Dragablz
         }
 
         /// <summary>
+        /// Property to set HorizontalScrollBarVisibility
+        /// </summary>
+        /// <returns></returns>
+        public static readonly DependencyProperty HorizontalScrollBarVisibilityProperty = DependencyProperty.Register(
+          "HorizontalScrollBarVisibility", typeof(ScrollBarVisibility), typeof(TabablzControl), new PropertyMetadata(ScrollBarVisibility.Auto));
+
+        /// <summary>
+        /// Property to set HorizontalScrollBarVisibility
+        /// </summary>
+        /// <returns></returns>
+        public ScrollBarVisibility HorizontalScrollBarVisibility
+        {
+            get { return (ScrollBarVisibility)GetValue(HorizontalScrollBarVisibilityProperty); }
+            set { SetValue(HorizontalScrollBarVisibilityProperty, value); }
+        }
+
+        /// <summary>
+        /// Property to set VerticalScrollBarVisibility
+        /// </summary>
+        /// <returns></returns>
+        public static readonly DependencyProperty VerticalScrollBarVisibilityProperty = DependencyProperty.Register(
+            "VerticalScrollBarVisibility", typeof(ScrollBarVisibility), typeof(TabablzControl), new PropertyMetadata(ScrollBarVisibility.Auto));
+
+        /// <summary>
+        /// Property to set VerticalScrollBarVisibility
+        /// </summary>
+        /// <returns></returns>
+        public ScrollBarVisibility VerticalScrollBarVisibility
+        {
+            get { return (ScrollBarVisibility)GetValue(VerticalScrollBarVisibilityProperty); }
+            set { SetValue(VerticalScrollBarVisibilityProperty, value); }
+        }
+
+
+
+        /// <summary>
         /// Helper method to add an item next to an existing item.
         /// </summary>
         /// <remarks>

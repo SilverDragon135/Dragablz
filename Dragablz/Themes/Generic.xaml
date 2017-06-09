@@ -622,7 +622,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type local:DragablzItemsControl}">
                     <Border BorderThickness="{TemplateBinding Border.BorderThickness}" Padding="{TemplateBinding Control.Padding}" BorderBrush="{TemplateBinding Border.BorderBrush}" Background="{TemplateBinding Panel.Background}" SnapsToDevicePixels="True">
-                        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"
+                        <ScrollViewer HorizontalScrollBarVisibility="{TemplateBinding HorizontalScrollBarVisibility}" VerticalScrollBarVisibility="{TemplateBinding VerticalScrollBarVisibility}"
                                       Width="{TemplateBinding ActualWidth}"
                                       Height="{TemplateBinding ActualHeight}"
                                       Background="{x:Null}">
@@ -671,7 +671,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type local:DragablzItemsControl}">
                     <Border BorderThickness="{TemplateBinding Border.BorderThickness}" Padding="{TemplateBinding Control.Padding}" BorderBrush="{TemplateBinding Border.BorderBrush}" Background="{TemplateBinding Panel.Background}" SnapsToDevicePixels="True">
-                        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"
+                        <ScrollViewer HorizontalScrollBarVisibility="{TemplateBinding HorizontalScrollBarVisibility}" VerticalScrollBarVisibility="{TemplateBinding VerticalScrollBarVisibility}"
                                       Width="{TemplateBinding ActualWidth}"
                                       Height="{TemplateBinding ActualHeight}"
                                       Template="{StaticResource TabablzScrollViewerControlTemplate}">
@@ -1590,6 +1590,8 @@
                                             ContentTemplateSelector="{TemplateBinding HeaderPrefixContentTemplateSelector}"/>
                             <local:DragablzItemsControl x:Name="PART_HeaderItemsControl"                                                         
                                                         Grid.Column="1"
+                                                        HorizontalScrollBarVisibility="{TemplateBinding HorizontalScrollBarVisibility}"
+                                                        VerticalScrollBarVisibility="{TemplateBinding VerticalScrollBarVisibility}"
                                                         ItemsSource="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Items}"                                                                                                            
                                                         ItemContainerStyle="{TemplateBinding ItemContainerStyle}"
                                                         ItemsOrganiser="{TemplateBinding HeaderItemsOrganiser}"
